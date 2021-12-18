@@ -63,5 +63,3 @@ test(P, N) ->
     no ->
       no
     end.
-
-fermat.:call(server()).
