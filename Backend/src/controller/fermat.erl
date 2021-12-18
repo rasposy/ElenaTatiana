@@ -11,34 +11,35 @@
 mpow(N, 1, _) ->
   N;
 
-% Calculation with: N^K/2 mod M if K is even.
+%% Calculation with: N^K/2 mod M if K is even.
 
 % N^K mod M 
-% rem = remainder of dividing the first number by the second, same as modulo in other languages.
-% in this case K/2.
+  % rem = remainder of dividing the first number by the second, same as modulo in other languages.
+  % in this case K/2.
 mpow(N, K, M) ->
   mpow(K rem 2, N, K, M).
 
 % N^K/2 mod M
-% div = perform the division and return the integer component.
+  % div = perform the division and return the integer component.
 
-% ??? for what stays 0 ???
+  % ??? for what stays 0 ???
 
 mpow(0, N, K, M) ->
   X = mpow(N, K div 2, M),
   % N^K/2 * N^K/2
-  (X * X) rem M; % if K is even (=paire)
+    % if K is even (=paire)
+  (X * X) rem M; 
 
-% Calculation with: N^K-1 mod M if K is odd.
+%% Calculation with: N^K-1 mod M if K is odd.
 
 % N^K-1 mod M
-
-% ??? for what stays _ ???
-
+  % underscore (_) are normal variables
+  % however, they are ignored by the compiler --> they do not generate warnings
 mpow(_, N, K, M) ->
   X = mpow(N, K-1, M),
   % N^K-1 * N
-  (X * N) rem M. % if K is odd (= impaire)
+    % if K is odd (= impaire)
+  (X * N) rem M. 
 
 % if P=1 it's very likely to be a prime.
 fermat(1) ->
@@ -65,4 +66,4 @@ test(P, N) ->
       no
     end.
 
-fermat:call(Server()).
+fermat.:call(server()).
