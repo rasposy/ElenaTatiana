@@ -21,9 +21,7 @@ mpow(N, K, M) ->
 
 % N^K/2 mod M
   % div = perform the division and return the integer component.
-
-  % ??? for what stays 0 ???
-
+  % 0 is here as placeholder because we pass from 3 to 4 parameter.
 mpow(0, N, K, M) ->
   X = mpow(N, K div 2, M),
   % N^K/2 * N^K/2
