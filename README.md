@@ -1,6 +1,6 @@
 # ElenaTatiana
 Primy
-# Project Minimal Example
+# Project Primy
 
 Description
 -----
