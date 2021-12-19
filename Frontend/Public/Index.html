@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Primy</title>
+  <link rel="icon" type="image/x-icon" href="Pprimy.png">
+</head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="Styles.css" rel="stylesheet">
+
+<header>
+  <div class="headerText">
+    <p> December 2021 </p>
+  </div>
+</header>
+
+<body>
+  <h1>
+    <p> Primy </p>
+  </h1>
+
+  <h2>
+    <p> Find the largest prime number </p>
+  </h2>
+
+  <div class="longText">
+    <p><u> What is a prime number? </u></p>
+    <p> A prime number is a positive integer that has exactly two distinct
+       whole number factors (or divisors), namely 1 and the number itself.
+       A natural number greater than 1 that is not a prime number is called a
+       composite number. </p>
+  </div>
+  <div class="shortText">
+    <p> Here below, you can find a table with the first 50 prime numbers. </p>
+  </div>
+  <div class="tableBackground">
+    <table>
+      <br>
+      <tr>
+        <td> 2 </td>
+        <td> 3 </td>
+        <td> 5 </td>
+        <td> 7 </td>
+        <td> 11 </td>
+        <td> 13 </td>
+        <td> 17 </td>
+        <td> 19 </td>
+        <td> 23 </td>
+        <td> 29 </td>
+      </tr>
+      <tr>
+        <td> 31 </td>
+        <td> 37 </td>
+        <td> 41 </td>
+        <td> 43 </td>
+        <td> 47 </td>
+        <td> 53 </td>
+        <td> 59 </td>
+        <td> 61 </td>
+        <td> 67 </td>
+        <td> 71 </td>
+      </tr>
+      <tr>
+        <td> 73 </td>
+        <td> 79 </td>
+        <td> 83 </td>
+        <td> 89 </td>
+        <td> 97 </td>
+        <td> 101 </td>
+        <td> 103 </td>
+        <td> 107 </td>
+        <td> 109 </td>
+        <td> 113 </td>
+      </tr>
+      <tr>
+        <td> 127 </td>
+        <td> 131 </td>
+        <td> 137 </td>
+        <td> 139 </td>
+        <td> 149 </td>
+        <td> 151 </td>
+        <td> 157 </td>
+        <td> 163 </td>
+        <td> 167 </td>
+        <td> 173 </td>
+      </tr>
+      <tr>
+        <td> 179 </td>
+        <td> 181 </td>
+        <td> 191 </td>
+        <td> 193 </td>
+        <td> 197 </td>
+        <td> 199 </td>
+        <td> 211 </td>
+        <td> 223 </td>
+        <td> 227 </td>
+        <td> 229 </td>
+      </tr>
+    </table>
+  </div>
+  <div class="longText">
+    <p><u> The project </u></p>
+    <p> The goal of this application is to create a simulation of a distributed
+      algorithm to find large prime numbers. We have a server that is in control
+      of the computation and several workers, whom a set of numbers is assigned
+      to test for primality. </p>
+    </div>
+    <div class="shortText">
+      <p> Try it out! </p>
+    </div>
+    <div class="calculatorBackground">
+      <div class="descriptionText">
+        <br>
+        <label> Enter Boundry: </label>
+        <input type="text" id="boundryMin" name="boundryMin" placeholder="Min"></input>
+        <input type="text" id="boundryMax" name="boundryMax" placeholder="Max"></input>
+      </div>
+      <button class="button" onclick="displayResult"> Search </button>
+      <div class="descriptionText">
+        <label> Result: </label>
+      </div>
+      <!-- white box to show output -->
+    </div>
+    <br><br>
+</body>
+
+<footer>
+  <div class="footerText">
+    <p> Elena and Tatiana </p>
+    <p> Concurrent and Distributed Computing </p>
+    <p> University of Fribourg </p>
+  </div>
+</footer>
+
+<!-- Button script - link with Erlang -->
+<script>
+function displayResult(){
+
+}
+</script>
+
+</html>

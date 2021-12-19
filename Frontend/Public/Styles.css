@@ -1,0 +1,139 @@
+header{
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  top: 0px;
+  background: #006064;
+}
+.headerText{
+  text-align: right;
+  color: #FFFFFF;
+}
+body{
+  width: 100%;
+  height: 100%;
+  background: #E0F7FA;
+}
+h1{
+  font-family: 'DigitalNumbers-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 62px;
+  text-align: center;
+  color: #000000;
+}
+h2{
+  font-family: 'DigitalNumbers-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 31px;
+  text-align: center;
+  color: #000000;
+}
+@font-face{
+  font-family:'DigitalNumbers-Regular';
+  src: url("DigitalNumbers-Regular.ttf");
+}
+.longText{
+  font-family: 'DidactGothic-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  padding-left: 25%;
+  width: 50%;
+  text-align: justify;
+  color: #000000;
+}
+.shortText{
+  font-family: 'DidactGothic-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+}
+.descriptionText{
+  font-family: 'DidactGothic-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  padding-left: 10%;
+  text-align: left;
+  color: #000000;
+}
+table, td{
+  border: 1px solid #000000;
+  border-collapse: collapse;
+  padding: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'DidactGothic-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  background: #FFFFFF;
+}
+.tableBackground{
+  border: 1px solid #000000;
+  margin-left: auto;
+  margin-right: auto;
+  width: 485px;
+  height: 245px;
+  left: 414px;
+  top: 445px;
+  background: #B2EBF2;
+}
+.calculatorBackground{
+  border: 1px solid #000000;
+  margin-left: auto;
+  margin-right: auto;
+  width: 485px;
+  height: 245px;
+  left: 414px;
+  top: 445px;
+  background: #B2EBF2;
+}
+.button{
+  font-family: 'DidactGothic-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  align-items: center;
+  border: 1.5px solid;
+  border-color: Black;
+  padding: 8px 40px;
+  margin: 35px;
+  margin-left: 35%;
+  transtion-duration: 0.4s;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: #80DEEA;
+}
+@font-face{
+  font-family:'DidactGothic-Regular';
+  src: url("DidactGothic-Regular.ttf");
+}
+input{
+  width: 50px;
+  margin-left: 10%;
+}
+footer{
+  position: absolute;
+  width: 100%;
+  height: 95px;
+  background: #006064;
+}
+.footerText{
+  text-align: center;
+  line-height: 0.4;
+  color: #FFFFFF;
+}
