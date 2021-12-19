@@ -1,4 +1,4 @@
--module(event).
+-module(event_route).
 
 -behaviour(cowboy_rest).
 
