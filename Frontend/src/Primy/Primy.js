@@ -15,10 +15,10 @@ class Primy extends Component {
 
 
   componentDidMount() {
-    axios.get(`http://localhost:8080/books`)
+    axios.get(`http://localhost:8080/primes`)
       .then(res => {
         const primes = res.data;
-        this.setState({ books: primes });
+        this.setState({ primes: primes });
       })
   }
   render() {
