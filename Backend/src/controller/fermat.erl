@@ -12,7 +12,6 @@ mpow(N, 1, _) ->
   N;
 
 %% Calculation with: N^K/2 mod M if K is even.
-
 % N^K mod M 
   % rem = remainder of dividing the first number by the second, same as modulo in other languages.
   % in this case K/2.
@@ -29,7 +28,6 @@ mpow(0, N, K, M) ->
   (X * X) rem M; 
 
 %% Calculation with: N^K-1 mod M if K is odd.
-
 % N^K-1 mod M
   % underscore (_) are normal variables
   % however, they are ignored by the compiler --> they do not generate warnings

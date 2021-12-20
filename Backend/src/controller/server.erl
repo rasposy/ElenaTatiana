@@ -59,7 +59,7 @@ handle_call({get}, _From, fermat) ->
                 || K <- Keys],
     {reply, Response, fermat}.
 
-% We get compile warnings from gen_server unless we define these
+% we get compile warnings from gen_server unless we define these
 handle_cast(_Message, fermat) -> {noreply, fermat}.
 
 handle_info(_Message, fermat) -> {noreply, fermat}.
