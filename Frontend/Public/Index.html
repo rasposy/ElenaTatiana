@@ -110,16 +110,29 @@
     <div class="calculatorBackground">
       <div class="descriptionText">
         <br>
-        <label> Enter Boundry: </label>
-        <input type="text" id="boundryMin" name="boundryMin" placeholder="Min"></input>
-        <input type="text" id="boundryMax" name="boundryMax" placeholder="Max"></input>
+        <label> Enter number: </label>
+        <input type="text" id="number" name="number" placeholder="number"></input>
       </div>
-      <button class="button" onclick="displayResult"> Search </button>
+      <button class="button" onclick="getResult()"> Search </button>
       <div class="descriptionText">
         <label> Result: </label>
       </div>
       <!-- white box to show output -->
     </div>
+    <script>
+      function getResult(){
+          var url = "http://localhost:8080/event";
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", url, false);
+          var min = document.getElementById("number").value;
+        
+          var obj = {number:number};
+          var objjson = JSON.stringify(obj);
+          xhr.setRequestHeader("Content-Type", "application/json");
+          xhr.send(objjson);
+          document.getElementById("output").innerHTML = xhr.response;
+      }
+  </script>
     <br><br>
 </body>
 

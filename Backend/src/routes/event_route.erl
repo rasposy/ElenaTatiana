@@ -58,7 +58,8 @@ post_response(Req0, _State0) ->
     % we need to decode to get only the content of the json data
     Decoded_array = decoded_data(DecodedData),
     % we get the DecodedData in the following form:
-    % {[{<<.>>, <<.>>}]} = a tuple {} containing a list [] containing a tuple {} with two bit strings <<>>.
+    % {[{<<.>>, <<.>>}]}
+    % {} containing [] containing again {} with <<>>.
 
     case Decoded_array of
         [] ->
@@ -66,6 +67,7 @@ post_response(Req0, _State0) ->
             Reply = {response, R}
     end,
 
+    % send response back to the frontend in json
     EncodedReply = jiffy:encode({[Reply]}),
     cowboy_req:reply(Code,
                      #{<<"content-type">> => <<"application/json">>},
@@ -73,9 +75,9 @@ post_response(Req0, _State0) ->
                      Req0).
 
 %% decoded_data(DecodedData) ->
-%%     % DecodedData_elem1 = [{<<.>>, <<.>>}]
+%%     % DecodedData_number = [{<<.>>, <<.>>}]
 %%     DecodedData_number = element(1, DecodedData), 
-%%     % DecodedData_elem1_head = {<<.>>, <<.>>}
+%%     % DecodedData_number_head = {<<.>>, <<.>>}
 %%     [DecodedData_number_head | _DecodedData_number_body] = DecodedData_number, 
 %%     % Decoded_array = <<.>>
 %%     Decoded_array = element(2, DecodedData_number_head), 
