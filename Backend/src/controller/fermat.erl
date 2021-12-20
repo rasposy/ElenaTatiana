@@ -63,3 +63,11 @@ test(P, N) ->
     no ->
       no
     end.
+
+start() ->
+    io:format("fermat initiated~n"),
+    gen_server:start_link({local, ?MODULE},
+                          ?MODULE,
+                          [],
+                          []).
+    

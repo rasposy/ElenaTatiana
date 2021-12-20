@@ -14,7 +14,7 @@
 -export([get/1, gets/0, post/2]).
 
 % these are all wrappers for calls to the fermat.
-get(Number) -> gen_server:call(?MODULE, {get, Number}).
+get(Number) -> gen_server:call(?MODULE, {fermat, Number}).
 
 gets() -> gen_server:call(?MODULE, {get}).
 
@@ -29,8 +29,9 @@ start() ->
 
 % this is called when a connection is made to the fermat.
 init([]) ->
-    fermat = dict:new(),
-    {ok, fermat}.
+    io:format("server initiated~n"),
+    Array = [0],
+    {ok, Array}.
 
 % handle_call is invoked in response to gen_server:call
 handle_call({post, Number, Prime}, _From, fermat) ->
